@@ -2,17 +2,40 @@ import { useState } from "react";
 import "../styles/App.css";
 
 function App() {
-  const [name, setName] = useState('');
-  const [slogan, setSlogan] = useState('');
-  const [technologies, setTechnologies] = useState('');
-  const [repo, setRepo] = useState('');
-  const [demo, setDemo] = useState('');
-  const [desc, setDesc] = useState('');
-  const [autor, setAutor] = useState('');
-  const [job, setJob] = useState('');
+  const [name, setName] = useState('Elegant Workspace');
+  const [slogan, setSlogan] = useState('Diseños Exclusivos');
+  const [repo, setRepo] = useState('#');
+  const [demo, setDemo] = useState('#');
+  const [technologies, setTechnologies] = useState('React JS - HTML - CSS');
+  const [desc, setDesc] = useState('Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, quos? Itaque, molestias eveniet laudantium adipisci vitae ratione');
+  const [autor, setAutor] = useState('Emmelie Bjôrklund');
+  const [job, setJob] = useState('Full stack Developer');
   const [image, setImage] = useState('');
   
-  
+  const handleChangeInput = (ev) => {
+    const inputID = ev.target.id;
+    const inputValue = ev.target.value;
+
+    if(inputID === 'name'){
+      setName(inputValue);
+    }else if(inputID === 'slogan'){
+      setSlogan(inputValue);
+    }else if(inputID === 'repo'){
+        setRepo(inputValue);
+    }else if(inputID === 'demo'){
+      setDemo(inputValue);
+    }else if(inputID === 'technologies'){
+      setTechnologies(inputValue);
+    }else if(inputID === 'desc'){
+      setDesc(inputValue);
+    }else if(inputID === 'autor'){
+      setAutor(inputValue);
+    }else if(inputID === 'job'){
+      setJob(inputValue);
+    }else if(inputID === 'image'){
+      setImage(inputValue);
+    }
+  };
 
   return (
 <>
@@ -41,24 +64,24 @@ function App() {
       <div className="card__author">
         <div className="card__authorPhoto"></div>
         <p className="card__job">
-          Full stack Developer
+          {job}
         </p>
-        <h3 className="card__name">Emmelie Bjôrklund</h3>
+        <h3 className="card__name">{autor}</h3>
       </div>
   
       <div className="card__project">            
-        <h3 className="card__name">Elegant Workspace</h3>
-        <p className="card__slogan">Diseños Exclusivos</p>
+        <h3 className="card__name">{name}</h3>
+        <p className="card__slogan">{slogan}</p>
         <h3 className="card__descriptionTitle">Product description</h3>
-        <p className="card__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, quos? Itaque, molestias eveniet laudantium adipisci vitae ratione</p>
+        <p className="card__description">{desc}</p>
 
         <div className="card__technicalInfo">
-          <p className="card__technologies">React JS - HTML - CSS</p>
+          <p className="card__technologies">{technologies}</p>
       
-          <a className="icon icon__www" href="#" title="Haz click para ver el proyecto online">
+          <a className="icon icon__www" href={demo} title="Haz click para ver el proyecto online">
             Web link
           </a>
-          <a className="icon icon__github" href="#" title="Haz click para ver el código del proyecto">
+          <a className="icon icon__github" href={repo} title="Haz click para ver el código del proyecto">
             GitHub link
           </a>
         </div>
