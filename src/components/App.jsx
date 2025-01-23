@@ -2,14 +2,17 @@ import { useState } from "react";
 import "../styles/App.css";
 
 function App() {
+  const [name, setName] = useState('');
+  const [slogan, setSlogan] = useState('');
   const [technologies, setTechnologies] = useState('');
   const [repo, setRepo] = useState('');
-  
+  const [demo, setDemo] = useState('');
+  const [desc, setDesc] = useState('');
   const [autor, setAutor] = useState('');
   const [job, setJob] = useState('');
   const [image, setImage] = useState('');
-  const[demo, setDemo] = useState("");
-  const[desc, setDesc] = useState("");
+  
+  
 
   return (
 <>
@@ -66,8 +69,8 @@ function App() {
     <h2 className="title">Información</h2>
     <fieldset className="addForm__group">
       <legend className="addForm__title">Cuéntanos sobre el proyecto</legend>
-      <input className="addForm__input" type="text" name="name" id="name" placeholder="Nombre del proyecto"/>
-      <input className="addForm__input" type="text" name="slogan" id="slogan" placeholder="Slogan"/>
+      <input className="addForm__input" type="text" name="name" id="name" placeholder="Nombre del proyecto" onChange={ handleChangeInput}/>
+      <input className="addForm__input" type="text" name="slogan" id="slogan" placeholder="Slogan" onChange={ handleChangeInput}/>
       <div className="addForm__2col">
         <input className="addForm__input" type="url" name="repo" id="repo" placeholder="Repositorio" onChange={handleChangeInput}/>
         <input className="addForm__input" type="url" name="demo" id="demo" placeholder="Demo" onChange={handleChangeInput}/>
