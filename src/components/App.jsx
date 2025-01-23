@@ -2,6 +2,7 @@ import { useState } from "react";
 import "../styles/App.css";
 
 function App() {
+  //Variables estado de los imputs
   const [name, setName] = useState('');
   const [slogan, setSlogan] = useState('');
   const [repo, setRepo] = useState('');
@@ -12,10 +13,12 @@ function App() {
   const [job, setJob] = useState('');
   // const [image, setImage] = useState(''); -- Image y photo no sabemos como usarla en la preview
   
+  //función manejadora con id reconocemos el input con value obtenemos su valor
   const handleChangeInput = (ev) => {
     const inputID = ev.target.id;
     const inputValue = ev.target.value;
 
+    //asignar valor a la variable para renderizar en el preview con set
     if(inputID === 'name'){
       setName(inputValue);
     }else if(inputID === 'slogan'){
@@ -64,7 +67,7 @@ function App() {
         <p className="card__job">
           {job || 'Full stack Developer'}
         </p>
-        <h3 className="card__name">{autor || 'Emmelie Bjôrklund'}</h3>
+        <h3 className="card__name">{autor || 'Emmelie Bjôrklund'}</h3> {/* añadiendo '||' cuando el valor está vacío se pinta la string si no se pinta la variable */}
       </div>
   
       <div className="card__project">            
