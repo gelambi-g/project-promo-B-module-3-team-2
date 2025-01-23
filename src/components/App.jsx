@@ -3,9 +3,9 @@ import "../styles/App.css";
 
 function App() {
   
-  const [autor, setAutor] = useState("");
-  const [job, setJob] = useState("");
-  const [image, setImage] = useState("");
+  const [autor, setAutor] = useState('');
+  const [job, setJob] = useState('');
+  const [image, setImage] = useState('');
 
   return (
 <>
