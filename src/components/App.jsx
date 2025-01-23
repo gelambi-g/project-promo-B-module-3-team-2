@@ -2,8 +2,8 @@ import { useState } from "react";
 import "../styles/App.css";
 
 function App() {
-  let [name, setName] = useState('');
-  let [slogan, setSlogan] = useState('');
+  const [name, setName] = useState('');
+  const [slogan, setSlogan] = useState('');
 
   return (
 <>
