@@ -1,6 +1,9 @@
+import { useState } from "react";
 import "../styles/App.css";
 
 function App() {
+  const [technologies, setTechnologies] = useState('');
+  const [repo, setRepo] = useState('');
   
 
   return (
@@ -61,10 +64,10 @@ function App() {
       <input className="addForm__input" type="text" name="name" id="name" placeholder="Nombre del proyecto"/>
       <input className="addForm__input" type="text" name="slogan" id="slogan" placeholder="Slogan"/>
       <div className="addForm__2col">
-        <input className="addForm__input" type="url" name="repo" id="repo" placeholder="Repositorio"/>
+        <input className="addForm__input" type="url" name="repo" id="repo" placeholder="Repositorio" onChange={handleChangeInput}/>
         <input className="addForm__input" type="url" name="demo" id="demo" placeholder="Demo"/>
       </div>         
-      <input className="addForm__input" type="text" name="technologies" id="technologies" placeholder="Tecnologías"/>
+      <input className="addForm__input" type="text" name="technologies" id="technologies" placeholder="Tecnologías" onChange={handleChangeInput}/>
       <textarea className="addForm__input" type="text" name="desc" id="desc" placeholder="Descripción" rows="5"></textarea>
     </fieldset>
 
