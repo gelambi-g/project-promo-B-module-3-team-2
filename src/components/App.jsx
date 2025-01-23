@@ -8,6 +8,8 @@ function App() {
   const [autor, setAutor] = useState('');
   const [job, setJob] = useState('');
   const [image, setImage] = useState('');
+  const[demo, setDemo] = useState("");
+  const[desc, setDesc] = useState("");
 
   return (
 <>
@@ -68,10 +70,10 @@ function App() {
       <input className="addForm__input" type="text" name="slogan" id="slogan" placeholder="Slogan"/>
       <div className="addForm__2col">
         <input className="addForm__input" type="url" name="repo" id="repo" placeholder="Repositorio" onChange={handleChangeInput}/>
-        <input className="addForm__input" type="url" name="demo" id="demo" placeholder="Demo"/>
+        <input className="addForm__input" type="url" name="demo" id="demo" placeholder="Demo" onChange={handleChangeInput}/>
       </div>         
       <input className="addForm__input" type="text" name="technologies" id="technologies" placeholder="Tecnologías" onChange={handleChangeInput}/>
-      <textarea className="addForm__input" type="text" name="desc" id="desc" placeholder="Descripción" rows="5"></textarea>
+      <textarea className="addForm__input" type="text" name="desc" id="desc" placeholder="Descripción" rows="5" onChange={handleChangeInput}></textarea>
     </fieldset>
 
     <fieldset className="addForm__group">
