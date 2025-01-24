@@ -2,6 +2,7 @@ import { useState } from "react";
 import "../styles/App.css";
 import Header from "./Header";
 import Main from "./Main";
+import Footer from "./Footer";
 
 function App() {
 
@@ -63,9 +64,7 @@ function App() {
 
   <Main/>
 
-  <footer className="footer">
-    <img className="logoSponsor" src="./images/adalab.png" alt="Logo Adalab"/>
-  </footer>
+  <Footer/>
 </div>
 </>
 )

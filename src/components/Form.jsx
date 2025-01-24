@@ -1,3 +1,4 @@
+import UploadButton from "./UploadButton"
 
 function Form() {
   return (
@@ -22,10 +23,9 @@ function Form() {
         </fieldset>
 
         <fieldset className="addForm__group--upload">
-            <label htmlFor="image" className="button">Subir foto del proyecto</label>
-            <input className="addForm__hidden" type="file" name="image" id="image" onChange={handleChangeInput}/>
-            <label htmlFor="photo" className="button">Subir foto de la autora</label>
-            <input className="addForm__hidden" type="file" name="photo" id="photo"/>
+            <UploadButton text="Subir foto del proyecto" htmlFor="image" name="image" id="image"/>
+            <UploadButton text= "Subir foto de la autora" htmlFor="photo" name="photo" id="photo"/>
+            {/* falta funcionalidad dentro de upload */}
             <button className="button--large">Guardar proyecto</button>
         </fieldset>
         
