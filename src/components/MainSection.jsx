@@ -3,14 +3,14 @@ import Hero from "./Hero"
 import Preview from "./Preview"
 
 
-function Main() {
+function MainSection(props) {
   return (
     <main className="main">
         <Hero/>
-        <Preview/>
+        <Preview dataCard={props.dataCard}/>
         <Form/>
   </main>
   )
 }
 
-export default Main
+export default MainSection

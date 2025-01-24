@@ -1,10 +1,13 @@
 
+import Header from "./Header";
+
 
 function Landing (){
 
-    return{
-
-    }
+    return(
+        <Header/>
+        
+    )
 }
 
 export default Landing;
