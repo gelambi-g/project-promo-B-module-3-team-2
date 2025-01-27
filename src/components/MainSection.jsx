@@ -2,6 +2,7 @@ import Form from "./Form"
 import Hero from "./Hero"
 import Preview from "./Preview"
 import '../styles/MainSection.css'
+import PropTypes from 'prop-types';
 
 
 function MainSection(props) {
@@ -13,5 +14,10 @@ function MainSection(props) {
   </main>
   )
 }
+
+MainSection.propTypes = {
+    dataCard : PropTypes.object,
+    changeData : PropTypes.func
+};
 
 export default MainSection

@@ -1,4 +1,5 @@
 import '../styles/Card.css'
+import PropTypes from 'prop-types';
 
 function Card(props) {
   return (
@@ -33,5 +34,17 @@ function Card(props) {
     </article>
   )
 }
+
+Card.propTypes = {
+  dataCard : PropTypes.object,
+  name: PropTypes.string,
+  slogan: PropTypes.string,
+  repo: PropTypes.string,
+  demo: PropTypes.string,
+  technologies: PropTypes.string,
+  desc: PropTypes.string,
+  autor: PropTypes.string,
+  job: PropTypes.string
+};
 
 export default Card

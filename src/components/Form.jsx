@@ -1,5 +1,6 @@
 import UploadButton from "./UploadButton"
 import '../styles/Form.css'
+import PropTypes from 'prop-types';
 
 function Form(props) {
       //función manejadora con id reconocemos el input con value obtenemos su valor
@@ -39,5 +40,9 @@ function Form(props) {
         </form>
   )
 }
+
+Form.propTypes = {
+    changeData : PropTypes.func,
+};
 
 export default Form
