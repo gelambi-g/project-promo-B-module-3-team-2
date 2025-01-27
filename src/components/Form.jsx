@@ -1,32 +1,14 @@
 import UploadButton from "./UploadButton"
 import '../styles/Form.css'
 
-function Form() {
+function Form(props) {
       //función manejadora con id reconocemos el input con value obtenemos su valor
     const handleChangeInput = (ev) => {
         const inputID = ev.target.id;
-        const inputValue = ev.target.value;
-    
-        //asignar valor a la variable para renderizar en el preview con set
-        // if(inputID === 'name'){
-        //   setName(inputValue);
-        // }else if(inputID === 'slogan'){
-        //   setSlogan(inputValue);
-        // }else if(inputID === 'repo'){
-        //     setRepo(inputValue);
-        // }else if(inputID === 'demo'){
-        //   setDemo(inputValue);
-        // }else if(inputID === 'technologies'){
-        //   setTechnologies(inputValue);
-        // }else if(inputID === 'desc'){
-        //   setDesc(inputValue);
-        // }else if(inputID === 'autor'){
-        //   setAutor(inputValue);
-        // }else if(inputID === 'job'){
-        //   setJob(inputValue);
-        // }
-      };
-  return (
+        const inputValue = ev.target.value;   
+        props.changeData(inputID, inputValue);  
+    };
+    return (
     <form className="addForm">
         <h2 className="title">Información</h2>
         <fieldset className="addForm__group">
