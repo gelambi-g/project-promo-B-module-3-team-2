@@ -1,8 +1,10 @@
+import '../styles/Footer.css'
+import logoAdalab from '../images/adalab.png';
 
 function Footer() {
   return (
     <footer className="footer">
-    <img className="logoSponsor" src="./images/adalab.png" alt="Logo Adalab"/>
+    <img className="logoSponsor" src={logoAdalab} alt="Logo Adalab"/>
   </footer>
   )
 }

@@ -1,5 +1,6 @@
 import logoAdalab from '../images/adalab.png';
 import logo from '../images/laptop-code-solid.svg';
+import '../styles/Header.css'
 
 function Header() {
   return (

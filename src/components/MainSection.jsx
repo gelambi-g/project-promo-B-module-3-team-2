@@ -1,6 +1,7 @@
 import Form from "./Form"
 import Hero from "./Hero"
 import Preview from "./Preview"
+import '../styles/MainSection.css'
 
 
 function MainSection(props) {

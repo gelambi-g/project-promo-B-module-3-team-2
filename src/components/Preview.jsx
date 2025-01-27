@@ -1,4 +1,5 @@
-import Card from "./Card"
+import Card from "./Card";
+import '../styles/Preview.css';
 
 function Preview(props) {
   return (

@@ -1,4 +1,5 @@
 import UploadButton from "./UploadButton"
+import '../styles/Form.css'
 
 function Form() {
       //función manejadora con id reconocemos el input con value obtenemos su valor

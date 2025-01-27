@@ -1,3 +1,4 @@
+import '../styles/UploadButton.css';
 
 function UploadButton(props) {
   return (
