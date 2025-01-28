@@ -16,19 +16,40 @@ function App() {
     technologies: '',
     desc: '',
     autor: '',
-    job: ''
+    job: ''    
   }
 )
 
 
   
+//asignar valor a la variable para renderizar en el preview con set
+  const changeData = (key, value) => {
+    if(key === 'name'){
+          setDataCard({...dataCard, name : value});
+        }else if(key === 'slogan'){
+          setDataCard({...dataCard, slogan : value});
+        }else if(key === 'repo'){
+          setDataCard({...dataCard, repo : value});
+        }else if(key === 'demo'){
+          setDataCard({...dataCard, demo : value});
+        }else if(key === 'technologies'){
+          setDataCard({...dataCard, technologies : value});
+        }else if(key === 'desc'){
+          setDataCard({...dataCard, desc : value});
+        }else if(key === 'autor'){
+          setDataCard({...dataCard, autor : value});
+        }else if(key === 'job'){
+          setDataCard({...dataCard, job : value});
+        }
+  }
+
   return (
 <>
 <div className="container">
 
   <Header />
 
-  <MainSection dataCard={dataCard}/>
+  <MainSection dataCard={dataCard} changeData={changeData}/>
 
   <Footer/>
 </div>
