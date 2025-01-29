@@ -21,3 +21,5 @@ function Landing (props){
 }
 
 export default Landing;
+
+//Para hacer el landing lo que vamos a tener que hacer es tener un array con todas las tarjetas y recorrerlo con map para pintar cada una de las tarjetas del array.

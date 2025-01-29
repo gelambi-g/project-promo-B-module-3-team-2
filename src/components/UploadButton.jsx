@@ -10,3 +10,5 @@ function UploadButton(props) {
 }
 
 export default UploadButton
+
+// Tenemos que unificar las props que le pasamos a este componente porque como todas tienen el mismo valor se puede ahcer una genérica y llamarla donde estamos llamando a las diferentes props. Es decir, htmlFor, id y name tienen todas el valor "image" o "photo" entonces se puede hacer una genérica y llamarla cada vez que llamemos a id, name o htmlFor.

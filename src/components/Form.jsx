@@ -46,3 +46,6 @@ Form.propTypes = {
 };
 
 export default Form
+
+//Tenemos que hacer validaciones del formulario. Tanto de rellenar todos los campos como de expresiones regulares (tipo de dato) que veirifcan el formato de cada campo (ejemplo: que en mail haya un @ y .com). Poner mensajes de aviso en caso de que no se haya rellenado correctamente.
+//También tenemos que añadir los enlaces a los iconos de gitHub y dle repositorio para que se abran en una ventana nueva cuando pinchemos (target: _blank).
