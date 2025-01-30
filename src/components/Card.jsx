@@ -1,13 +1,15 @@
 import '../styles/Card.css'
 import PropTypes from 'prop-types';
-
+import avatar from '../images/avatar.webp';
 function Card(props) {
+  const avatarImg = props.dataCard.photo === '' ? avatar : props.dataCard.photo;
+
   return (
     <article className="card">
             <h2 className="card__projectTitle"><span className="card__projectTitle--text">Personal project card</span></h2>
 
             <div className="card__author">
-            <div className="card__authorPhoto"></div>
+            <div className="card__authorPhoto" style={{ backgroundImage: `url(${avatarImg})` }}></div>
             <p className="card__job">
                 {props.dataCard.job || 'Full stack Developer'}
             </p>

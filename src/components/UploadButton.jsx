@@ -1,16 +1,28 @@
 import '../styles/UploadButton.css';
-
+import React from 'react';
 
 
 function UploadButton(props) {
 
+  const fr = new FileReader();
+  const myFileField = React.createRef();
+
   const handleFile = (ev) => {
-    const id = ev.target.id;
-    const urlImage = ev.target.value;
-    getImage(id, urlImage)
+    const urlImage = ev.currentTarget.files[0];
+
+    if (ev.currentTarget.files.length > 0) {
+      const myFile = urlImage;
+      fr.addEventListener('load', getImage);
+      fr.readAsDataURL(myFile);
+    }
   }
 
-  const fr = new FileReader();
+  const getImage = () => {
+    const urlImage = fr.result;
+    props.getFileImage(props.id, urlImage);
+  };
+
+  
 
   return (
     <>
