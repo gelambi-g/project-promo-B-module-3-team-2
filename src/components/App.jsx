@@ -48,7 +48,8 @@ function App() {
     //       setDataCard({...dataCard, job : value});
     //     }
   }
-  const getImage = (id, urlImage) => {
+  
+  const getFileImage = (id, urlImage) => {
     setDataCard({...dataCard, [id]: urlImage})
   }
 
@@ -58,7 +59,7 @@ function App() {
 
   <Header />
 
-  <MainSection dataCard={dataCard} changeData={changeData} getImage={getImage}/>
+  <MainSection dataCard={dataCard} changeData={changeData} getFileImage={getFileImage}/>
 
   <Footer/>
 </div>

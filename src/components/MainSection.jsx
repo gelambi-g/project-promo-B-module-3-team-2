@@ -10,7 +10,7 @@ function MainSection(props) {
     <main className="main">
         <Hero/>
         <Preview dataCard={props.dataCard}/>
-        <Form changeData={props.changeData}/>
+        <Form changeData={props.changeData} getFileImage={props.getFileImage} dataCard={props.dataCard}/>
   </main>
   )
 }
