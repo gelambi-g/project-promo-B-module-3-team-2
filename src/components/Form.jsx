@@ -7,7 +7,8 @@ function Form(props) {
     const handleChangeInput = (ev) => {
         const inputID = ev.target.id;
         const inputValue = ev.target.value;   
-        props.changeData(inputID, inputValue);  
+        props.changeData(inputID, inputValue); 
+        props.getImage(id, urlImage)
     };
     return (
     <form className="addForm">
@@ -31,8 +32,8 @@ function Form(props) {
         </fieldset>
 
         <fieldset className="addForm__group--upload">
-            <UploadButton text="Subir foto del proyecto" htmlFor="image" name="image" id="image"/>
-            <UploadButton text= "Subir foto de la autora" htmlFor="photo" name="photo" id="photo"/>
+            <UploadButton text="Subir foto del proyecto" id="image" getImage={getImage}/>
+            <UploadButton text= "Subir foto de la autora" id="photo"/>
             {/* falta funcionalidad dentro de upload */}
             <button className="button--large">Guardar proyecto</button>
         </fieldset>

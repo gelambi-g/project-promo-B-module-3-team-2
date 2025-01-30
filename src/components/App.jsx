@@ -16,7 +16,9 @@ function App() {
     technologies: '',
     desc: '',
     autor: '',
-    job: ''    
+    job: '',
+    photo:'',
+    image:''   
   }
 )
 
@@ -46,6 +48,9 @@ function App() {
     //       setDataCard({...dataCard, job : value});
     //     }
   }
+  const getImage = (id, urlImage) => {
+    setDataCard({...dataCard, [id]: urlImage})
+  }
 
   return (
 <>
@@ -53,7 +58,7 @@ function App() {
 
   <Header />
 
-  <MainSection dataCard={dataCard} changeData={changeData}/>
+  <MainSection dataCard={dataCard} changeData={changeData} getImage={getImage}/>
 
   <Footer/>
 </div>
