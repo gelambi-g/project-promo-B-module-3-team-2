@@ -20,8 +20,8 @@ function App() {
     photo:'',
     image:''   
   }
-)
-
+);
+  const [urlDataCard, setUrlDataCard] = useState ('');
 
   
 //asignar valor a la variable para renderizar en el preview con set
@@ -59,7 +59,7 @@ function App() {
 
   <Header />
 
-  <MainSection dataCard={dataCard} changeData={changeData} getFileImage={getFileImage}/>
+  <MainSection dataCard={dataCard} changeData={changeData} getFileImage={getFileImage} setUrlDataCard={setUrlDataCard} urlDataCard={urlDataCard}/>
 
   <Footer/>
 </div>
