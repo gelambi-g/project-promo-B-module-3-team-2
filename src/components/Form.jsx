@@ -50,8 +50,10 @@ function Form(props) {
             <UploadButton text="Subir foto del proyecto" id="image" getFileImage={props.getFileImage}/>
             <UploadButton text= "Subir foto de la autora" id="photo" getFileImage={props.getFileImage}/>
             {/* falta funcionalidad dentro de upload */}
-            <button className="button--large" onClick={handleSaveProject}>Guardar proyecto</button>
-            {props.urlDataCard ? <a href={props.urlDataCard} target="_blank">Ver proyecto</a> : null}
+            <div className="create_link">
+                <button className="button--large" onClick={handleSaveProject}>Guardar proyecto</button>
+                {props.urlDataCard ? <a className="link_card" href={props.urlDataCard} target="_blank">Ver proyecto</a> : null}
+            </div>
         </fieldset>
         
         </form>
