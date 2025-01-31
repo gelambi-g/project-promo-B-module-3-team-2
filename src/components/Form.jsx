@@ -3,12 +3,27 @@ import '../styles/Form.css'
 import PropTypes from 'prop-types';
 
 function Form(props) {
-      //función manejadora con id reconocemos el input con value obtenemos su valor
+     
+        //función manejadora con id reconocemos el input con value obtenemos su valor
     const handleChangeInput = (ev) => {
         const inputID = ev.target.id;
-        const inputValue = ev.target.value;   
+        const inputValue = ev.target.value;    
         props.changeData(inputID, inputValue); 
     };
+
+    const checkValidInput = () => {
+               
+        for (const element in props.dataCard) {
+            if (element === '') {
+                console.log("ERROR")
+                } else {
+                console.log("EXITOOOOOO")
+                    }
+                }
+            }
+            //Función funciona. Falta terminar el condicional. Sale por el else y no debería ser así. 
+    
+    
 
     const handleSaveProject = (ev) => {
         ev.preventDefault()
@@ -23,6 +38,7 @@ function Form(props) {
             console.log(data)
             props.setUrlDataCard(data.cardURL)
         })
+        checkValidInput()
     }
 
     return (
