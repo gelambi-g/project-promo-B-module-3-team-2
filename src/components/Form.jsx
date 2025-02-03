@@ -3,7 +3,7 @@ import '../styles/Form.css'
 import PropTypes from 'prop-types';
 
 function Form(props) {
-     
+
         //función manejadora con id reconocemos el input con value obtenemos su valor
     const handleChangeInput = (ev) => {
         const inputID = ev.target.id;
@@ -12,7 +12,7 @@ function Form(props) {
     };
 
     const checkValidInput = () => {
-               
+
         for (const element in props.dataCard) {
             if (element === '') {
                 console.log("ERROR")
@@ -65,7 +65,7 @@ function Form(props) {
         <fieldset className="addForm__group--upload">
             <UploadButton text="Subir foto del proyecto" id="image" getFileImage={props.getFileImage}/>
             <UploadButton text= "Subir foto de la autora" id="photo" getFileImage={props.getFileImage}/>
-            {/* falta funcionalidad dentro de upload */}
+            
             <div className="create_link">
                 <button className="button--large" onClick={handleSaveProject}>Guardar proyecto</button>
                 {props.urlDataCard ? <a className="link_card" href={props.urlDataCard} target="_blank">Ver proyecto</a> : null}
@@ -78,6 +78,11 @@ function Form(props) {
 
 Form.propTypes = {
     changeData : PropTypes.func,
+    dataCard : PropTypes.object,
+    setUrlDataCard : PropTypes.func,
+    getFileImage : PropTypes.string,
+    urlDataCard : PropTypes.string
+
 };
 
 export default Form

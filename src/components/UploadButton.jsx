@@ -1,5 +1,6 @@
 import '../styles/UploadButton.css';
 import React from 'react';
+import PropTypes from 'prop-types';
 
 
 function UploadButton(props) {
@@ -32,6 +33,12 @@ function UploadButton(props) {
 
 
   )
+}
+
+UploadButton.propTypes = {
+  getFileImage : PropTypes.func,
+  id : PropTypes.string,
+  text : PropTypes.string
 }
 
 export default UploadButton
