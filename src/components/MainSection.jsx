@@ -5,12 +5,12 @@ import '../styles/MainSection.scss'
 import PropTypes from 'prop-types';
 
 
-function MainSection(props) {
+function MainSection({dataCard, changeData, getFileImage, setUrlDataCard, urlDataCard}) {
   return (
     <main className="main">
         <Hero/>
-        <Preview dataCard={props.dataCard}/>
-        <Form changeData={props.changeData} getFileImage={props.getFileImage} dataCard={props.dataCard} setUrlDataCard={props.setUrlDataCard} urlDataCard={props.urlDataCard}/>
+        <Preview dataCard={dataCard}/>
+        <Form changeData={changeData} getFileImage={getFileImage} dataCard={dataCard} setUrlDataCard={setUrlDataCard} urlDataCard={urlDataCard}/>
   </main>
   )
 }
