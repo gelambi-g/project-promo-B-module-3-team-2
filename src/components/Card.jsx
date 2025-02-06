@@ -1,4 +1,4 @@
-import '../styles/Card.css'
+import '../styles/Card.scss'
 import PropTypes from 'prop-types';
 import avatar from '../images/avatar.webp';
 function Card(props) {

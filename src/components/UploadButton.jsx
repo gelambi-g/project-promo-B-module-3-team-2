@@ -1,4 +1,4 @@
-import '../styles/UploadButton.css';
+import '../styles/UploadButton.scss';
 import React from 'react';
 
 

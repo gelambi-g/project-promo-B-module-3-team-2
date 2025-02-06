@@ -1,7 +1,7 @@
 import Form from "./Form"
 import Hero from "./Hero"
 import Preview from "./Preview"
-import '../styles/MainSection.css'
+import '../styles/MainSection.scss'
 import PropTypes from 'prop-types';
 
 

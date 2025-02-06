@@ -1,5 +1,5 @@
 import UploadButton from "./UploadButton"
-import '../styles/Form.css'
+import '../styles/Form.scss'
 import PropTypes from 'prop-types';
 
 function Form(props) {

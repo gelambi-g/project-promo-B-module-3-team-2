@@ -1,5 +1,5 @@
 import Card from "./Card";
-import '../styles/Preview.css';
+import '../styles/Preview.scss';
 import ebook from '../images/ebook-example.jpg';
 
 function Preview(props) {

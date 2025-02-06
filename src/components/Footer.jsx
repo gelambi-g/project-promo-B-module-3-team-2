@@ -1,4 +1,4 @@
-import '../styles/Footer.css'
+import '../styles/Footer.scss'
 import logoAdalab from '../images/adalab.png';
 
 function Footer() {
