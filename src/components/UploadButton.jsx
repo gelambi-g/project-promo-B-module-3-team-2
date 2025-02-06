@@ -1,12 +1,12 @@
 import '../styles/UploadButton.scss';
-import React from 'react';
+//import React from 'react';
 import PropTypes from 'prop-types';
 
 
-function UploadButton(props) {
+function UploadButton({getFileImage, id, text}) {
 
   const fr = new FileReader();
-  const myFileField = React.createRef();
+  //const myFileField = React.createRef();
 
   const handleFile = (ev) => {
     const urlImage = ev.currentTarget.files[0];
@@ -20,17 +20,16 @@ function UploadButton(props) {
 
   const getImage = () => {
     const urlImage = fr.result;
-    props.getFileImage(props.id, urlImage);
+    getFileImage(id, urlImage);
   };
 
   
 
   return (
     <>
-    <label htmlFor={props.id} className="button">{props.text}</label>
-    <input className="addForm__hidden" type="file" name={props.id} id={props.id} onChange={handleFile}/>
+    <label htmlFor={id} className="button">{text}</label>
+    <input className="addForm__hidden" type="file" name={id} id={id} onChange={handleFile}/>
     </>
-
 
   )
 }

@@ -17,7 +17,10 @@ function MainSection({dataCard, changeData, getFileImage, setUrlDataCard, urlDat
 
 MainSection.propTypes = {
     dataCard : PropTypes.object,
-    changeData : PropTypes.func
+    changeData : PropTypes.func,
+    getFileImage: PropTypes.func,
+    setUrlDataCard: PropTypes.func,
+    urlDataCard: PropTypes.string
 };
 
 export default MainSection

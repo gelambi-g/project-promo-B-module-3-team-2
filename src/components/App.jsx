@@ -3,6 +3,8 @@ import "../styles/App.scss";
 import Header from "./Header";
 import MainSection from "./MainSection";
 import Footer from "./Footer";
+import { Route, Routes } from "react-router-dom";
+import Landing from "./Landing";
 
 function App() {
 
@@ -58,8 +60,14 @@ function App() {
 <div className="container">
 
   <Header />
+  <Routes>
+    <Route path="/landing" element={<Landing dataCard={dataCard}/> }/>
 
-  <MainSection dataCard={dataCard} changeData={changeData} getFileImage={getFileImage} setUrlDataCard={setUrlDataCard} urlDataCard={urlDataCard}/>
+    <Route path="/" element={<MainSection dataCard={dataCard} changeData={changeData} getFileImage={getFileImage} setUrlDataCard={setUrlDataCard} urlDataCard={urlDataCard}/>}/>
+
+  </Routes>
+
+  
 
   <Footer/>
 </div>

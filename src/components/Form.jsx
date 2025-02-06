@@ -80,7 +80,7 @@ Form.propTypes = {
     changeData : PropTypes.func,
     dataCard : PropTypes.object,
     setUrlDataCard : PropTypes.func,
-    getFileImage : PropTypes.string,
+    getFileImage : PropTypes.func,
     urlDataCard : PropTypes.string
 
 };

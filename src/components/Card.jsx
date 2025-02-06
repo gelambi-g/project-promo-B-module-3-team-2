@@ -1,7 +1,9 @@
 import '../styles/Card.scss'
 import PropTypes from 'prop-types';
 import avatar from '../images/avatar.webp';
+
 function Card({dataCard}) {
+
   const avatarImg = dataCard.photo === '' ? avatar : dataCard.photo;
 
   return (
@@ -25,10 +27,10 @@ function Card({dataCard}) {
             <div className="card__technicalInfo">
                 <p className="card__technologies">{dataCard.technologies || 'React JS - HTML - CSS'}</p>
             
-                <a className="icon icon__www" href={dataCard.demo || '#'} title="Haz click para ver el proyecto online">
+                <a className="icon icon__www" href={dataCard.demo || '#'} title="Haz click para ver el proyecto online" target='_blank'>
                 Web link
                 </a>
-                <a className="icon icon__github" href={dataCard.repo || '#'} title="Haz click para ver el código del proyecto">
+                <a className="icon icon__github" href={dataCard.repo || '#'} title="Haz click para ver el código del proyecto" target='_blank'>
                 GitHub link
                 </a>
             </div>

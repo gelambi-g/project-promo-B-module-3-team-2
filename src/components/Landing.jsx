@@ -1,21 +1,27 @@
+import { Link } from "react-router-dom";
 import Card from "./Card";
-import Footer from "./Footer";
-import Header from "./Header";
-import Hero from "./Hero";
+import '../styles/Landing.scss';
 
 
-function Landing (props){
+
+function Landing ({dataCard}){
 
     return(
     <>
-        <Header/>
-        <Hero />
-        <Card dataCard={props.dataCard}/>
-        <Card dataCard={props.dataCard}/>
-        <Card dataCard={props.dataCard}/>
-        <Card dataCard={props.dataCard}/>
+       
+       <section className="hero">
+            <h2 className="title">Proyectos molones</h2>
+            <p className="hero__text">Escaparate en línea para recoger ideas a través de la tecnología</p>
+            <Link to="/" className="button--link">Crear nuevo proyecto</Link>
+        </section>
+        <section className="projects">
+        <Card dataCard={dataCard}/>
+        <Card dataCard={dataCard}/>
+        <Card dataCard={dataCard}/>
+        <Card dataCard={dataCard}/> 
+        </section>
 
-        <Footer />
+        
     </>
     )
 }
