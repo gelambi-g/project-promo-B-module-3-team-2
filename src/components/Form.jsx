@@ -65,7 +65,7 @@ function Form({changeData, getFileImage, dataCard, setUrlDataCard, urlDataCard})
         <fieldset className="addForm__group--upload">
             <UploadButton text="Subir foto del proyecto" id="image" getFileImage={getFileImage}/>
             <UploadButton text= "Subir foto de la autora" id="photo" getFileImage={getFileImage}/>
-            {/* falta funcionalidad dentro de upload */}
+            
             <div className="create_link">
                 <button className="button--large" onClick={handleSaveProject}>Guardar proyecto</button>
                 {urlDataCard ? <a className="link_card" href={urlDataCard} target="_blank">Ver proyecto</a> : null}
@@ -78,6 +78,11 @@ function Form({changeData, getFileImage, dataCard, setUrlDataCard, urlDataCard})
 
 Form.propTypes = {
     changeData : PropTypes.func,
+    dataCard : PropTypes.object,
+    setUrlDataCard : PropTypes.func,
+    getFileImage : PropTypes.string,
+    urlDataCard : PropTypes.string
+
 };
 
 export default Form
