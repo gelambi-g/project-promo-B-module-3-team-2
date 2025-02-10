@@ -56,12 +56,33 @@
   .addForm .addForm__input::placeholder {
     color: var(--color-white-50);
   }
+
+ 
   
   .addForm .addForm__group--upload {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
     margin-bottom: 25px;
+      @media (min-width: 768px) {
+    
+       
+    }
+  }
+
+  .addForm {
+    flex-wrap: wrap;
+  }
+
+  .upload_button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @media (min-width: 768px) {
+      flex-wrap: nowrap;
+     
+  }
   }
   
   .addForm .addForm__hidden {
@@ -120,8 +141,6 @@
   .link_card:hover {
     font-size: 1.5rem;
     color: white;
-    background-color: var(--color-white-50);
-    border-radius: 15px;
     padding: 5px 18px;
 
   }

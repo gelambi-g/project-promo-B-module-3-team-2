@@ -63,8 +63,10 @@ function Form({changeData, getFileImage, dataCard, setUrlDataCard, urlDataCard})
         </fieldset>
 
         <fieldset className="addForm__group--upload">
-            <UploadButton text="Subir foto del proyecto" id="image" getFileImage={getFileImage}/>
-            <UploadButton text= "Subir foto de la autora" id="photo" getFileImage={getFileImage}/>
+            <div className="upload_button">
+                <UploadButton text="Subir foto del proyecto" id="image" getFileImage={getFileImage}/>
+                <UploadButton text= "Subir foto de la autora" id="photo" getFileImage={getFileImage}/>
+            </div>
             
             <div className="create_link">
                 <button className="button--large" onClick={handleSaveProject}>Guardar proyecto</button>
