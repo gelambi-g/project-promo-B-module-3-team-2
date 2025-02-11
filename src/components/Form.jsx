@@ -68,7 +68,7 @@ function Form({changeData, getFileImage, dataCard, setUrlDataCard, urlDataCard})
             
             <div className="create_link">
                 <button className="button--large" onClick={handleSaveProject}>Guardar proyecto</button>
-                {urlDataCard ? <a className="link_card" href={urlDataCard} target="_blank">Ver proyecto</a> : null}
+                {urlDataCard ? <a className="link_card" href={urlDataCard} target="_blank">Ver proyecto</a> : <p>Revisa que todos los campos estén rellenados</p>}
             </div>
         </fieldset>
         
