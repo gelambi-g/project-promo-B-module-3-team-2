@@ -8,7 +8,10 @@
   
 .preview  {
     margin-inline: 20px;
-  
-    transform: translateY(-45px);
+    
+
+    @media (min-width: 768px) {
+      
+    }
   }
   

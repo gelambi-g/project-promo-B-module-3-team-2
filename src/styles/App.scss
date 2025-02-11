@@ -63,6 +63,7 @@ fieldset {
 .container {
   padding: 22px 22px 0 22px;
   background-color: var(--color-dark);
+  min-height: 100vh;
 }
 
 /* Se repite en Form y en Hero. Lo hemos dejado aquí porque lo pillan ambos archivos. */

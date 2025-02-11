@@ -4,4 +4,15 @@
     flex-wrap: wrap;
     gap: 20px;
     padding-top: 20px;
+        @media (min-width: 925px) {
+            // flex-direction: row;
+            // flex-wrap: nowrap;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+    }
+    
+    // & .card {
+    //     width: 20%;
+    // }
 }
+
